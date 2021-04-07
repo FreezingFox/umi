@@ -1,0 +1,5 @@
+<app-item
+  *ngFor="let characterItem of characters"
+  [character]="characterItem"
+  (characterEvent)="emitCharacter($event)">
+</app-item>
