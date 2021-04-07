@@ -13,7 +13,7 @@ export class CharacterComponent implements OnInit {
 
   constructor() { }
 
-  acceptCharacter(character: Character) {
+  onCharacterSelected(character: Character): void {
     this.character = character;
   }
 

@@ -1,5 +1,5 @@
 <app-item
-  *ngFor="let characterItem of characters"
-  [character]="characterItem"
-  (characterEvent)="emitCharacter($event)">
+  *ngFor="let character of characters"
+  [character]="character"
+  (characterSelected)="onCharacterSelected($event)">
 </app-item>

@@ -9,7 +9,7 @@ import { Character } from '../character.model';
 })
 export class ListComponent implements OnInit {
 
-  @Output() characterEvent = new EventEmitter<Character>();
+  @Output() characterSelected = new EventEmitter<Character>();
 
   characters: Character[] = [
     new Character(
@@ -30,8 +30,8 @@ export class ListComponent implements OnInit {
     )
   ];
 
-  emitCharacter(character: Character) {
-    this.characterEvent.emit(character);
+  onCharacterSelected(character: Character): void {
+    this.characterSelected.emit(character);
   }
 
   constructor() { }

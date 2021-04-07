@@ -10,15 +10,13 @@ import { Character } from '../../character.model';
 export class ItemComponent implements OnInit {
 
   @Input() character: Character;
-  @Output() characterEvent = new EventEmitter<Character>();
+  @Output() characterSelected = new EventEmitter<Character>();
 
   constructor() { }
 
-  onClick(character: Character) {
-    this.characterEvent.emit(character);
-    console.log('emitting from ITEM');
+  onCharacterSelected(character: Character): void {
+    this.characterSelected.emit(character);
   }
-
 
   ngOnInit(): void {
   }

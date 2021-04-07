@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-12">
       <div class="col-md-5">
-        <app-list (characterEvent)="acceptCharacter($event)"></app-list>
+        <app-list (characterSelected)="onCharacterSelected($event)"></app-list>
       </div>
       <div class="col-md-7">
         <app-detail [character]="character"></app-detail>
