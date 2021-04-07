@@ -30,13 +30,8 @@ export class ListComponent implements OnInit {
     )
   ];
 
-  name: string = 'void';
-
   emitCharacter(character: Character) {
-    console.log('trying to emit from LIST');
     this.characterEvent.emit(character);
-    this.name = 'beep';
-    console.log('emitting from LIST');
   }
 
   constructor() { }
